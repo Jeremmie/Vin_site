@@ -1,0 +1,553 @@
+*{
+    font-family: 'Hurricane', cursive;
+
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.body {
+    margin: 0;
+}
+
+.header {
+    
+    background-color: #024000;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    width: 100%;
+    height: fit-content;
+    
+}
+
+.logo {
+    color: white;
+    width: 20vw;
+    font-size: 2rem;
+    justify-content: center;
+}
+
+@media screen and (max-width: 375px) {
+    .logo {
+        font-size: 1.1rem;
+        width: 40vw;
+    }
+}
+
+#container {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0;
+    padding: 10px;
+    position: static;
+    margin-left: 40vw;
+    
+}
+
+/*Format trop petit pour avoir des boutons*/
+@media screen and (max-width: 375px) {
+    #container {
+        display: none;
+    }
+}
+
+#container a {
+    color: white;
+    text-decoration: none;
+}
+
+#container a:hover {
+    text-decoration: underline;
+}
+
+.onglet {
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    
+    color: white;
+    scroll-snap-align: start;
+}
+
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    
+    height: 100vh;
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        scroll-snap-type: none;
+    }
+}
+
+.one {
+
+max-height: 100vh;
+}
+
+.presentation {
+    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/raisin_2.jpg);
+    background-repeat: no-repeat;
+    
+}
+
+
+
+.presentation h1 {
+    font-family: 'Hurricane', cursive;
+    font-weight: 100;
+    font-size: 250%;
+    height: fit-content;
+    display: block;
+    background-color: #024000;   
+    padding: 40px;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 375px) {
+    .presentation h1 {
+        font-size: 200%;
+        font-weight: 10;
+        padding: 20px;
+        width: 90%;
+    }
+}
+
+.two {
+    background-color: #024000;
+
+    }
+
+.three {
+background-color: #024000;
+}
+
+.four {
+    background-color: #024000;
+    }
+
+
+.container_page2 {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    
+    
+}
+
+@media screen and (max-width: 375px) {
+    .container_page2 {
+        display: flex;
+        flex-direction: column;
+        height: 0;
+        padding: 2%;
+    }
+}
+
+.container_page2 div {
+    
+    height: 50vh;
+    padding: 0;
+    color: white;
+   
+    text-align: center;
+    border-width: 10px;
+    border-color: white;
+}
+
+.item1 {
+grid-column-start: 1;
+grid-column-end: 3;
+background-image: url(img/bouteille_2.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+#item1_mobile {
+    display: none;
+}
+
+@media screen and (max-width: 375px) {
+    .item1 {
+        
+        display: none;
+    }
+}
+
+.item2 {
+    grid-column-start: 3;
+    grid-column-end: 6; 
+    
+    padding: 40px;
+    text-align: center;
+    
+
+}
+
+@media screen and (max-width: 375px) {
+    .item2 p{
+    font-size: 90%;
+    padding: 15px 0 0 0;
+    }
+
+    .item2 {
+        margin: none;
+    }
+
+    .item2 h1{
+        font-size: 120%;
+        padding: 7px 0 0 0;
+    }
+
+    .item3 {
+
+    }
+
+    .item3 h1{
+        font-size: 120%;
+        padding: 7px 0 0 0;
+    }
+
+    .item3 p{
+        font-size: 90%;
+        padding: 15px 0 0 0;
+    }
+
+    #item1_mobile {
+        display: initial;
+        background-image: url(img/bouteille_2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 20vh;
+        justify-content: space-between;
+    }
+}
+
+.item3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    
+    padding: 40px;
+    text-align: center;
+}
+
+.item4 {
+    background-image: url(img/tonneaux.jpg);
+    grid-column-start: 3;
+    grid-column-end: 6;
+    background-size: cover;
+}
+
+.container_class2 {
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+}
+
+.container_class2 div {
+    height: 33.3vh;
+    padding: 0;
+    color: white;
+   
+    text-align: center;
+    border-color: #024000;
+    
+}
+
+.item1_three {
+    background-image: url(img/raisin.jpg);
+    grid-column-start: 1;
+    grid-column-end: 7;
+    background-size: cover;
+}
+
+.item2_three {
+    grid-column-start: 7;
+    grid-column-end: 11;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.item3_three {
+    background-image: url(img/vigneron_4.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    display: flex;
+    justify-content: center;
+    
+}
+.item4_three {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    width: 30%;
+    background-color: #024000;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.item5_three {
+    grid-column-start: 1;
+    grid-column-end: 11;
+    background-image: url(img/paysage_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-y: 60%;
+    
+}
+
+.item6_three {
+    width: 40%;
+    background-color: #024000;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    
+}
+
+.section_4 {
+    max-width: 100vw;
+    display: flex;
+    margin: 5rem;
+
+}
+
+.agri {
+    flex: 1;
+    /*padding: 0 10rem;*/
+    height: 60vh;
+    
+}
+
+.agri_milieu {
+    flex: 0.15;
+}
+
+.agri img {
+    width: 100%;
+    height: 30vw;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.agri h1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.agri p {
+    margin: auto;
+    height: fit-content;
+}
+
+.five {
+    background-image: url(img/chateau.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.chateau_text {
+    max-width: 40%;
+    background-color: #024000;
+    padding: 1rem;
+    border-radius: 10px;
+    position: relative;
+    left: 55%;
+    top: 69%;
+}
+
+.six {
+    background-image: url(img/vigne_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+.vigne_texte {
+    max-width: 40%;
+    background-color: #024000;
+    padding: 1rem;
+    border-radius: 10px;
+    position: relative;
+    left: 5%;
+    top: 10%;
+}
+
+.seven {
+    background-color: #024000;
+}
+
+.section_seven {
+    max-width: 100vw;
+    display: flex;
+    margin: 5rem;
+}
+
+.vins {
+    flex: 1;
+    /*padding: 0 10rem;*/
+    height: 60vh;
+}
+
+.vins img {
+    width: 100%;
+    height: 30vw;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.vins h1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.vins p {
+    margin: auto;
+    height: fit-content;
+}
+
+.eight {
+    background-color: #024000;
+}
+
+.section_eight {
+    max-width: 100vw;
+    display: flex;
+    margin: 2rem;
+}
+
+.infos_perso {
+    flex: 1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info_perso_groupe {
+    padding: 2% 0;
+}
+
+.info_newsletter_groupe {
+    padding: 2% 0;
+}
+
+.info_perso_groupe h1 {
+    padding-bottom: 0.5%;
+}
+
+.newsletter {
+    display: flex;
+    padding: 2% 0;
+}
+
+.newsletter p {
+    margin-right: 1.4%;
+}
+
+.newsletter p {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    padding: 2% 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter img {
+    max-width: 8%;
+    background-color: white;
+    border-radius: 20px;
+    
+    
+}
+
+.map {
+    
+}
+
+.minimap {
+    border-radius: 50px;
+    display: flex;
+    justify-content: end;
+    flex: 1;
+    
+    
+    justify-content: center;
+    
+}
+
+.minimap iframe {
+    margin: 0;
+    padding: 0;
+}
+
+.up {
+    position: fixed;
+    background-color: rgba(217, 217, 217, 50%);
+    border-radius: 20px;
+    left: 94%;
+    top: 90%;
+    z-index: 2;
+}
+
+
+#fname {
+    border-radius: 20px;
+    padding: 8px;
+}
+
+.newsletter label {
+    font-style: italic;
+    padding: 8px 8px 0 0;
+}
+
+.mail {
+    color: white;
+}
+
+.boutton_newsletter a{
+    color: black;
+    text-decoration: none;
+    
+}
+
+.boutton_newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boutton_newsletter:hover {
+    text-decoration: underline;
+    
+}
+
